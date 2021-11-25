@@ -123,32 +123,59 @@ projet_1/fast:
 	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/build
 .PHONY : projet_1/fast
 
-main.o: main.c.o
+philosopher_problem.o: philosopher_problem.c.o
 
-.PHONY : main.o
+.PHONY : philosopher_problem.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/main.c.o
-.PHONY : main.c.o
+philosopher_problem.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/philosopher_problem.c.o
+.PHONY : philosopher_problem.c.o
 
-main.i: main.c.i
+philosopher_problem.i: philosopher_problem.c.i
 
-.PHONY : main.i
+.PHONY : philosopher_problem.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/main.c.i
-.PHONY : main.c.i
+philosopher_problem.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/philosopher_problem.c.i
+.PHONY : philosopher_problem.c.i
 
-main.s: main.c.s
+philosopher_problem.s: philosopher_problem.c.s
 
-.PHONY : main.s
+.PHONY : philosopher_problem.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/main.c.s
-.PHONY : main.c.s
+philosopher_problem.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/philosopher_problem.c.s
+.PHONY : philosopher_problem.c.s
+
+producer_consumer.o: producer_consumer.c.o
+
+.PHONY : producer_consumer.o
+
+# target to build an object file
+producer_consumer.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/producer_consumer.c.o
+.PHONY : producer_consumer.c.o
+
+producer_consumer.i: producer_consumer.c.i
+
+.PHONY : producer_consumer.i
+
+# target to preprocess a source file
+producer_consumer.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/producer_consumer.c.i
+.PHONY : producer_consumer.c.i
+
+producer_consumer.s: producer_consumer.c.s
+
+.PHONY : producer_consumer.s
+
+# target to generate assembly for a file
+producer_consumer.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/producer_consumer.c.s
+.PHONY : producer_consumer.c.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... projet_1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... philosopher_problem.o"
+	@echo "... philosopher_problem.i"
+	@echo "... philosopher_problem.s"
+	@echo "... producer_consumer.o"
+	@echo "... producer_consumer.i"
+	@echo "... producer_consumer.s"
 .PHONY : help
 
 

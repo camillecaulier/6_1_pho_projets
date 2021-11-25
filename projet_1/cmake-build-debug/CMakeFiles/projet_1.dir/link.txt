@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/projet_1.dir/main.c.o  -o projet_1 
+/usr/bin/cc -g   CMakeFiles/projet_1.dir/philosopher_problem.c.o CMakeFiles/projet_1.dir/producer_consumer.c.o  -o projet_1 

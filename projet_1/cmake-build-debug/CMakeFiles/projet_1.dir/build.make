@@ -57,30 +57,45 @@ include CMakeFiles/projet_1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/projet_1.dir/flags.make
 
-CMakeFiles/projet_1.dir/main.c.o: CMakeFiles/projet_1.dir/flags.make
-CMakeFiles/projet_1.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/projet_1.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/projet_1.dir/main.c.o   -c /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/main.c
+CMakeFiles/projet_1.dir/philosopher_problem.c.o: CMakeFiles/projet_1.dir/flags.make
+CMakeFiles/projet_1.dir/philosopher_problem.c.o: ../philosopher_problem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/projet_1.dir/philosopher_problem.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/projet_1.dir/philosopher_problem.c.o   -c /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/philosopher_problem.c
 
-CMakeFiles/projet_1.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/projet_1.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/main.c > CMakeFiles/projet_1.dir/main.c.i
+CMakeFiles/projet_1.dir/philosopher_problem.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/projet_1.dir/philosopher_problem.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/philosopher_problem.c > CMakeFiles/projet_1.dir/philosopher_problem.c.i
 
-CMakeFiles/projet_1.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/projet_1.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/main.c -o CMakeFiles/projet_1.dir/main.c.s
+CMakeFiles/projet_1.dir/philosopher_problem.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/projet_1.dir/philosopher_problem.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/philosopher_problem.c -o CMakeFiles/projet_1.dir/philosopher_problem.c.s
+
+CMakeFiles/projet_1.dir/producer_consumer.c.o: CMakeFiles/projet_1.dir/flags.make
+CMakeFiles/projet_1.dir/producer_consumer.c.o: ../producer_consumer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/projet_1.dir/producer_consumer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/projet_1.dir/producer_consumer.c.o   -c /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/producer_consumer.c
+
+CMakeFiles/projet_1.dir/producer_consumer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/projet_1.dir/producer_consumer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/producer_consumer.c > CMakeFiles/projet_1.dir/producer_consumer.c.i
+
+CMakeFiles/projet_1.dir/producer_consumer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/projet_1.dir/producer_consumer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/producer_consumer.c -o CMakeFiles/projet_1.dir/producer_consumer.c.s
 
 # Object files for target projet_1
 projet_1_OBJECTS = \
-"CMakeFiles/projet_1.dir/main.c.o"
+"CMakeFiles/projet_1.dir/philosopher_problem.c.o" \
+"CMakeFiles/projet_1.dir/producer_consumer.c.o"
 
 # External object files for target projet_1
 projet_1_EXTERNAL_OBJECTS =
 
-projet_1: CMakeFiles/projet_1.dir/main.c.o
+projet_1: CMakeFiles/projet_1.dir/philosopher_problem.c.o
+projet_1: CMakeFiles/projet_1.dir/producer_consumer.c.o
 projet_1: CMakeFiles/projet_1.dir/build.make
 projet_1: CMakeFiles/projet_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable projet_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable projet_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projet_1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

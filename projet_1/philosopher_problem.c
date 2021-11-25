@@ -3,13 +3,13 @@
 #include <pthread.h>
 #include <semaphore.h>
 
-
+//gcc -o test philosopher_problem.c -lpthread
 typedef enum {hungry, eating, thinking} state;
 state* state_p;
 int n_p;
 sem_t* sem_p;
 sem_t mutex;
-
+//gcc -o test philosopher_problem.c -lpthread
 //function to see if philosopher can take both forks
 //return 1 if ok
 //return 0
@@ -69,7 +69,7 @@ int main(int argc, char **argv ) {
     for(int i =0; i<n_p;i++){
         int create_error=pthread_create(&threads[i],NULL, &run_philosopher, &i);
         if(create_error){
-            printf("error with thread %d\n" ,i,stderr);
+            fprintf(stderr,"error with thread %d\n" ,i);
             return 0;
         }
     }
@@ -79,17 +79,18 @@ int main(int argc, char **argv ) {
         int join_error=pthread_join(threads[i],NULL);
         int destroy_error=sem_destroy(&sem_p[i]);
         if(join_error){
-            printf("error with thread join %d\n" ,i,stderr);
+            fprintf(stderr,"error with thread join %d\n" ,i);
             return 0;
         }
         if(destroy_error){
-            printf("error with sem destroy %d\n" ,i,stderr);
+            fprintf(stderr,"error with sem destroy %d\n" ,i);
             return 0;
         }
     }
     free(state_p);
     free(sem_p);
     sem_destroy(&mutex);
+
 
     return 0;
 }
