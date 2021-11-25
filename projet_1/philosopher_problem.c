@@ -13,26 +13,38 @@ sem_t mutex;
 //function to see if philosopher can take both forks
 //return 1 if ok
 //return 0
-int test(int id_p){
+void test(int id_p){
     //must look if on both sides no one is eating
-}
-
-
-void pickup_fork(int id_p){
-
+    if(state_p[id_p]== hungry && state_p[(id_p-1)%n_p]!=eating && state_p[(id_p+1)%n_p]!= eating){
+        state_p[id_p] = eating;
+        sem_post(&sem_p[id_p]); //increment value;
+    }
 }
 
 void eat(int id_p){
-
+    sem_wait(&mutex);//mutex lock
+    state_p[id_p]=hungry;
+    test(id_p);
+    sem_post(&mutex);
+    sem_post(&sem_p[id_p]);
 }
-
+void rest(int id_p){
+    sem_wait(&mutex);
+    state_p[id_p] = thinking;
+    //test left
+    test((id_p-1)%n_p);
+    //test right
+    test((id_p+1)%n_p);
+    sem_post(&mutex);
+}
 void *run_philosopher(void *args){
     int n_cycle = 0;
     int id_p= *(int*) args;
     while(n_cycle<10000){ //run 10000 cycles
         n_cycle++;
+        eat(id_p);
+        rest(id_p);
     }
-    return NULL;
 }
 
 int main(int argc, char **argv ) {
@@ -77,6 +89,7 @@ int main(int argc, char **argv ) {
     }
     free(state_p);
     free(sem_p);
+    sem_destroy(&mutex);
 
     return 0;
 }
