@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/testing.dir/main.c.o CMakeFiles/testing.dir/philo.c.o  -o testing 
