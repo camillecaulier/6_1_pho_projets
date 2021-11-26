@@ -82,6 +82,9 @@
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/producer_consumer.c">
 			<Option target="projet_1"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/writer_reader.c">
+			<Option target="projet_1"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

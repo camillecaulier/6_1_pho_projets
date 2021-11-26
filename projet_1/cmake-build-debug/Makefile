@@ -177,6 +177,33 @@ producer_consumer.c.s:
 	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/producer_consumer.c.s
 .PHONY : producer_consumer.c.s
 
+writer_reader.o: writer_reader.c.o
+
+.PHONY : writer_reader.o
+
+# target to build an object file
+writer_reader.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/writer_reader.c.o
+.PHONY : writer_reader.c.o
+
+writer_reader.i: writer_reader.c.i
+
+.PHONY : writer_reader.i
+
+# target to preprocess a source file
+writer_reader.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/writer_reader.c.i
+.PHONY : writer_reader.c.i
+
+writer_reader.s: writer_reader.c.s
+
+.PHONY : writer_reader.s
+
+# target to generate assembly for a file
+writer_reader.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/writer_reader.c.s
+.PHONY : writer_reader.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... producer_consumer.o"
 	@echo "... producer_consumer.i"
 	@echo "... producer_consumer.s"
+	@echo "... writer_reader.o"
+	@echo "... writer_reader.i"
+	@echo "... writer_reader.s"
 .PHONY : help
 
 

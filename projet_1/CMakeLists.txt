@@ -3,4 +3,4 @@ project(projet_1 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(projet_1 philosopher_problem.c producer_consumer.c)
+add_executable(projet_1 philosopher_problem.c producer_consumer.c writer_reader.c)

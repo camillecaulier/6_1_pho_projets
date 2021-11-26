@@ -68,7 +68,7 @@ int main(int argc, char **argv ){
 
     pthread_t p_threads[n_p];
     pthread_t c_threads[n_c];
-    sem_init(&n_places_free,0,10);
+    sem_init(&n_places_free,0,8);
     sem_init(&n_places_taken,0,0);
     pthread_mutex_init(&mutex_buffer, NULL);
 
