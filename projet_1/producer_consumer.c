@@ -47,7 +47,7 @@ void* consumer(void* args){
         }
 
         count--;
-        printf("%d\n",total_elem);
+        //printf("%d\n",total_elem);
         pthread_mutex_unlock(&mutex_buffer);
         sem_post(&n_places_free);
 
