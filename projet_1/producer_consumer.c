@@ -33,6 +33,7 @@ void* producer(void* args){
         while(rand()>RAND_MAX/10000);
 
     }
+    sem_post(&n_places_taken);
     pthread_exit(NULL);
 }
 
@@ -62,7 +63,7 @@ int main(int argc, char **argv ){
     if(n_p<=0){
         perror("no producers\n");
     }
-    if(n_c){
+    if(n_c<=0){
         perror("no consumers\n");
     }
 
@@ -96,7 +97,6 @@ int main(int argc, char **argv ){
     sem_destroy(&n_places_free);
     sem_destroy(&n_places_taken);
     pthread_mutex_destroy(&mutex_buffer);
-
 
 
     return 0;
