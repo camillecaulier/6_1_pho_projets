@@ -8,7 +8,8 @@ typedef enum {hungry, eating, thinking} state;
 state* state_p;
 int n_p;
 sem_t* sem_p;
-sem_t mutex;
+sem_t mutex_buffer;
+int* p_index;
 //gcc -o test philosopher_problem.c -lpthread
 //function to see if philosopher can take both forks
 //return 1 if ok
@@ -22,29 +23,34 @@ void test(int id_p){
 }
 
 void eat(int id_p){
-    sem_wait(&mutex);//mutex lock
+    sem_wait(&mutex_buffer);//mutex_buffer lock
     state_p[id_p]=hungry;
+    printf("%d hungry\n",id_p);
     test(id_p);
-    sem_post(&mutex);
+    printf("%d eating \n",id_p);
+    sem_post(&mutex_buffer);
     sem_post(&sem_p[id_p]);
 }
 void rest(int id_p){
-    sem_wait(&mutex);
+    sem_wait(&mutex_buffer);
     state_p[id_p] = thinking;
+    printf("%d thinking\n",id_p);
     //test left
     test((id_p-1)%n_p);
     //test right
     test((id_p+1)%n_p);
-    sem_post(&mutex);
+    sem_post(&mutex_buffer);
 }
 void *run_philosopher(void *args){
     int n_cycle = 0;
     int id_p= *(int*) args;
-    while(n_cycle<10000){ //run 10000 cycles
+    while(n_cycle<100000){ //run 100000 cycles
         n_cycle++;
         eat(id_p);
         rest(id_p);
+        printf("running cycle\n");
     }
+    printf("PHILO %d IS DEADDDDDDDDDDDDDDDDDDDDDDDDDDD \n",id_p);
 }
 
 int main(int argc, char **argv ) {
@@ -59,21 +65,23 @@ int main(int argc, char **argv ) {
     state_p =(state*) malloc(sizeof(state)*n_p);
     sem_p = (sem_t*) malloc(sizeof(sem_t)*n_p);
 
-    for(int i =0; i<n_p; i++){
-        sem_init(&sem_p[i],0,1);
-        state_p[i] = thinking;
-    }
-    sem_init(&mutex,0,0); //value given as zero to act as a mutex
 
+    for(int i =0; i<n_p; i++){
+        sem_init(&sem_p[i],0,0);
+        state_p[i] = thinking;
+        p_index[i] =i;
+    }
+    sem_init(&mutex_buffer, 0, 1); //value given as 1 to act as a mutex_buffer
+    fprintf(stdout,"fuck you\n");
     //launch the threads
     for(int i =0; i<n_p;i++){
-        int create_error=pthread_create(&threads[i],NULL, &run_philosopher, &i);
+        int create_error=pthread_create(&threads[i],NULL, run_philosopher,(void *) &i);
         if(create_error){
             fprintf(stderr,"error with thread %d\n" ,i);
             return 0;
         }
     }
-
+    fprintf(stdout,"fuck you\n");
     //clean up everything
     for(int i=0;i<n_p;i++){
         int join_error=pthread_join(threads[i],NULL);
@@ -89,7 +97,7 @@ int main(int argc, char **argv ) {
     }
     free(state_p);
     free(sem_p);
-    sem_destroy(&mutex);
+    sem_destroy(&mutex_buffer);
 
 
     return 0;
