@@ -14,7 +14,7 @@ void* writer(void* args){
     int w_count=0;
     while(w_count<=640){
         w_count++;
-        
+
     }
 }
 void* reader(void* args){
