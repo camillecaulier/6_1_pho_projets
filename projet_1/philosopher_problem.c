@@ -69,10 +69,10 @@ int main(int argc, char **argv ) {
     for(int i =0; i<n_p; i++){
         sem_init(&sem_p[i],0,0);
         state_p[i] = thinking;
-        p_index[i] =i;
     }
     sem_init(&mutex_buffer, 0, 1); //value given as 1 to act as a mutex_buffer
     fprintf(stdout,"fuck you\n");
+
     //launch the threads
     for(int i =0; i<n_p;i++){
         int create_error=pthread_create(&threads[i],NULL, run_philosopher,(void *) &i);
