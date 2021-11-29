@@ -27,10 +27,12 @@ void* producer(void* args){
         buffer[count]=rand();
         count++;
         total_elem++;
+        //critcal section
+        while(rand()>RAND_MAX/10000);
         //printf("[prducdes %d\n",total_elem);
         pthread_mutex_unlock(&mutex_buffer);
         sem_post(&n_places_taken);
-        while(rand()>RAND_MAX/10000);
+
 
     }
     sem_post(&n_places_taken);
@@ -51,7 +53,7 @@ void* consumer(void* args){
         //printf("%d\n",total_elem);
         pthread_mutex_unlock(&mutex_buffer);
         sem_post(&n_places_free);
-
+        //taken element and runs request/process
         while(rand()>RAND_MAX/10000);
     }
     pthread_exit(NULL);

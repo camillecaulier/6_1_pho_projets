@@ -8,19 +8,51 @@
 
 int n_w;
 int n_r;
+int current_w =0;
+int current_r =0;
 pthread_mutex_t w_mutex;
 pthread_mutex_t r_mutex;
+sem_t r_sem;
+sem_t w_sem;
 void* writer(void* args){
     int w_count=0;
     while(w_count<=640){
         w_count++;
 
+        pthread_mutex_lock(&w_mutex);
+        current_w++;
+        if(current_w == 1){
+            sem_wait(&r_sem); //if first writer block reader
+        }
+        pthread_mutex_unlock(&w_mutex);
+
+        sem_wait(&w_sem);
+
+        //critiucal section
+        while(rand()>RAND_MAX/10000);
+
+        sem_post(&w_sem);
+        pthread_mutex_lock(&w_mutex);
+        w_count --;
+        if(w_count <= 0){ //wake up reader
+            sem_post(&r_sem);
+        }
+        pthread_mutex_unlock(&w_mutex);
+
     }
+    pthread_exit(NULL);
 }
 void* reader(void* args){
     int r_count=0;
     while(r_count<=2560){
         r_count++;
+        sem_wait(&r_sem);
+        pthread_mutex_lock(&r_mutex);
+        r_count++;
+        if(r_count== 1){
+            sem_wait(&w_sem); //if this is the first r then bloc w
+        }
+
 
     }
 }
