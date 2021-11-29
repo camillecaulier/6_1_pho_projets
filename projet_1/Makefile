@@ -10,7 +10,14 @@ clean:
 	rm writer_reader
 
 performance_philosopher:
+	$(CC) -o philosopher_problem philosopher_problem.c -lpthread
 	bash philosopher_shell.sh
 
 philosopher_problem: philosopher_problem.c
-	$(CC) -o philosopher_problem philosopher_problem.c -lpthread
+
+
+producer_consumer: producer_consumer.c
+	$(CC) producer_consumer.c -o producer_consumer -lpthread
+
+writer_reader: writer_reader.c
+	$(CC) writer_reader.c -o writer_reader -lpthread

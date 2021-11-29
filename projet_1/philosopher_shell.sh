@@ -1,7 +1,7 @@
 #!/bin/bash
 NTHREADS=16
 NSAMPLE=5
-make philosopher_problem
+#make philosopher_problem
 rm -f philosopher_problem.CSV
 echo "n_thread","time" >> philosopher_problem.CSV
 for((i=1;i<=NTHREADS;i++))
