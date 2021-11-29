@@ -12,3 +12,5 @@ clean:
 performance_philosopher:
 
 
+philosopher: philosopher_problem.c
+	$(CC) philosopher_problem.c -o philosopher -lpthread
