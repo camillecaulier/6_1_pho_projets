@@ -1,81 +1,81 @@
 n_thread,time
-1, fuck you fuck you fuck you 0.00
-1, fuck you fuck you fuck you 0.00
-1, fuck you fuck you fuck you 0.00
-1, fuck you fuck you fuck you 0.00
-1, fuck you fuck you fuck you 0.00
-2, fuck you fuck you fuck you 0.03
-2, fuck you fuck you fuck you 0.03
-2, fuck you fuck you fuck you 0.03
-2, fuck you fuck you fuck you 0.03
-2, fuck you fuck you fuck you 0.03
-3, fuck you fuck you fuck you 0.05
-3, fuck you fuck you fuck you 0.05
-3, fuck you fuck you fuck you 0.05
-3, fuck you fuck you fuck you 0.05
-3, fuck you fuck you fuck you 0.05
-4, fuck you fuck you fuck you 0.08
-4, fuck you fuck you fuck you 0.08
-4, fuck you fuck you fuck you 0.08
-4, fuck you fuck you fuck you 0.08
-4, fuck you fuck you fuck you 0.08
-5, fuck you fuck you fuck you 0.10
-5, fuck you fuck you fuck you 0.10
-5, fuck you fuck you fuck you 0.10
-5, fuck you fuck you fuck you 0.10
-5, fuck you fuck you fuck you 0.10
-6, fuck you fuck you fuck you 0.14
-6, fuck you fuck you fuck you 0.13
-6, fuck you fuck you fuck you 0.14
-6, fuck you fuck you fuck you 0.14
-6, fuck you fuck you fuck you 0.14
-7, fuck you fuck you fuck you 0.19
-7, fuck you fuck you fuck you 0.18
-7, fuck you fuck you fuck you 0.19
-7, fuck you fuck you fuck you 0.18
-7, fuck you fuck you fuck you 0.17
-8, fuck you fuck you fuck you 0.24
-8, fuck you fuck you fuck you 0.23
-8, fuck you fuck you fuck you 0.24
-8, fuck you fuck you fuck you 0.24
-8, fuck you fuck you fuck you 0.26
-9, fuck you fuck you fuck you 0.30
-9, fuck you fuck you fuck you 0.30
-9, fuck you fuck you fuck you 0.30
-9, fuck you fuck you fuck you 0.29
-9, fuck you fuck you fuck you 0.31
-10, fuck you fuck you fuck you 0.37
-10, fuck you fuck you fuck you 0.39
-10, fuck you fuck you fuck you 0.40
-10, fuck you fuck you fuck you 0.40
-10, fuck you fuck you fuck you 0.38
-11, fuck you fuck you fuck you 0.49
-11, fuck you fuck you fuck you 0.47
-11, fuck you fuck you fuck you 0.46
-11, fuck you fuck you fuck you 0.48
-11, fuck you fuck you fuck you 0.52
-12, fuck you fuck you fuck you 0.59
-12, fuck you fuck you fuck you 0.58
-12, fuck you fuck you fuck you 0.58
-12, fuck you fuck you fuck you 0.57
-12, fuck you fuck you fuck you 0.59
-13, fuck you fuck you fuck you 0.69
-13, fuck you fuck you fuck you 0.65
-13, fuck you fuck you fuck you 0.68
-13, fuck you fuck you fuck you 0.68
-13, fuck you fuck you fuck you 0.70
-14, fuck you fuck you fuck you 0.76
-14, fuck you fuck you fuck you 0.76
-14, fuck you fuck you fuck you 0.71
-14, fuck you fuck you fuck you 0.77
-14, fuck you fuck you fuck you 0.76
-15, fuck you fuck you fuck you 0.84
-15, fuck you fuck you fuck you 0.87
-15, fuck you fuck you fuck you 0.84
-15, fuck you fuck you fuck you 0.84
-15, fuck you fuck you fuck you 0.84
-16, fuck you fuck you fuck you 0.88
-16, fuck you fuck you fuck you 0.88
-16, fuck you fuck you fuck you 0.90
-16, fuck you fuck you fuck you 0.89
-16, fuck you fuck you fuck you 0.90
+1, 0.00
+1, 0.00
+1, 0.00
+1, 0.00
+1, 0.00
+2, 0.03
+2, 0.03
+2, 0.04
+2, 0.03
+2, 0.03
+3, 0.05
+3, 0.05
+3, 0.05
+3, 0.05
+3, 0.05
+4, 0.08
+4, 0.08
+4, 0.08
+4, 0.08
+4, 0.08
+5, 0.11
+5, 0.11
+5, 0.11
+5, 0.11
+5, 0.11
+6, : invalid pointer Command terminated by signal 6 0.14
+6, : invalid pointer Command terminated by signal 6 0.14
+6, : invalid pointer Command terminated by signal 6 0.14
+6, : invalid pointer Command terminated by signal 6 0.14
+6, : invalid pointer Command terminated by signal 6 0.14
+7, 0.18
+7, 0.17
+7, 0.18
+7, 0.18
+7, 0.17
+8, 0.22
+8, 0.22
+8, 0.25
+8, 0.23
+8, 0.26
+9, 0.29
+9, 0.31
+9, 0.32
+9, 0.30
+9, 0.31
+10, : invalid pointer Command terminated by signal 6 0.38
+10, : invalid pointer Command terminated by signal 6 0.39
+10, : invalid pointer Command terminated by signal 6 0.37
+10, : invalid pointer Command terminated by signal 6 0.39
+10, : invalid pointer Command terminated by signal 6 0.37
+11, 0.50
+11, 0.46
+11, 0.49
+11, 0.46
+11, 0.49
+12, 0.60
+12, 0.59
+12, 0.63
+12, 0.61
+12, 0.56
+13, 0.70
+13, 0.67
+13, 0.67
+13, 0.69
+13, 0.72
+14, : invalid pointer Command terminated by signal 6 0.83
+14, : invalid pointer Command terminated by signal 6 0.76
+14, : invalid pointer Command terminated by signal 6 0.58
+14, : invalid pointer Command terminated by signal 6 0.48
+14, : invalid pointer Command terminated by signal 6 0.50
+15, 0.52
+15, 0.65
+15, 0.68
+15, 0.71
+15, 0.75
+16, 0.85
+16, 0.95
+16, 0.90
+16, 0.98
+16, 0.92
