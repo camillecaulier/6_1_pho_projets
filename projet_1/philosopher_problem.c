@@ -25,16 +25,16 @@ void test(int id_p){
 void eat(int id_p){
     sem_wait(&mutex_buffer);//mutex_buffer lock
     state_p[id_p]=hungry;
-    printf("%d hungry\n",id_p);
-    test(id_p);
-    printf("%d eating \n",id_p);
+
+    test(id_p); //philosopher eating
+
     sem_post(&mutex_buffer);
     sem_post(&sem_p[id_p]);
 }
 void rest(int id_p){
     sem_wait(&mutex_buffer);
     state_p[id_p] = thinking;
-    printf("%d thinking\n",id_p);
+
     //test left
     test((id_p-1)%n_p);
     //test right
@@ -48,9 +48,9 @@ void *run_philosopher(void *args){
         n_cycle++;
         eat(id_p);
         rest(id_p);
-        printf("running cycle\n");
+
     }
-    printf("PHILO %d IS DEADDDDDDDDDDDDDDDDDDDDDDDDDDD \n",id_p);
+    //cycle finished
 }
 
 int main(int argc, char **argv ) {
@@ -71,7 +71,7 @@ int main(int argc, char **argv ) {
         state_p[i] = thinking;
     }
     sem_init(&mutex_buffer, 0, 1); //value given as 1 to act as a mutex_buffer
-    fprintf(stdout,"fuck you\n");
+
 
     //launch the threads
     for(int i =0; i<n_p;i++){
@@ -81,7 +81,7 @@ int main(int argc, char **argv ) {
             return 0;
         }
     }
-    fprintf(stdout,"fuck you\n");
+
     //clean up everything
     for(int i=0;i<n_p;i++){
         int join_error=pthread_join(threads[i],NULL);
