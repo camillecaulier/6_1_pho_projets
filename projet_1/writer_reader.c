@@ -16,7 +16,7 @@ sem_t r_sem;
 sem_t w_sem;
 void* writer(void* args){
     int w_count=0;
-    while(w_count<=20){
+    while(w_count<=640){
         w_count++;
 
         sem_wait(&w_sem);
@@ -25,12 +25,14 @@ void* writer(void* args){
         sem_post(&w_sem);
 
     }
-    fprintf(stdout,"writing FINISHED\n");
+    sem_post(&w_sem);
+    fprintf(stdout,"writing FINISHED ============\n");
+    fflush(stdout);
     pthread_exit(NULL);
 }
 void* reader(void* args){
     int r_count=0;
-    while(r_count<=30){
+    while(r_count<=2560){
         r_count++;
         sem_wait(&r_sem);
         pthread_mutex_lock(&r_mutex);
@@ -47,12 +49,12 @@ void* reader(void* args){
 
         pthread_mutex_lock(&r_mutex);
         r_current--;
-        if(r_count<=0){
+        if(r_current<=0){
             sem_post(&w_sem);//wake up writer when no writer
         }
         pthread_mutex_unlock(&r_mutex);
     }
-    fprintf(stdout,"READER FINSH\n");
+    fprintf(stdout,"READER FINSH=================\n");
     pthread_exit(NULL);
 }
 
