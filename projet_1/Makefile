@@ -16,7 +16,13 @@ performance_philosopher:
 performance_writer_reader:
 	$(CC) -o writer_reader writer_reader.c -lpthread
 	bash writer_reader_shell.sh
+
+performance_producer_consumer:
+	$(CC)producer_consumer.c -o producer_consumer -lpthread
+	bash producer_consumer_shell.sh
+
 philosopher_problem: philosopher_problem.c
+	$(CC) -o philosopher_problem philosopher_problem.c -lpthread
 
 
 producer_consumer: producer_consumer.c
