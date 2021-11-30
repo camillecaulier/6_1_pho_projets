@@ -8,7 +8,7 @@
 
 int n_w;
 int n_r;
-//int current_w =0;
+int current_w =0;
 int r_current =0;
 pthread_mutex_t w_mutex;
 pthread_mutex_t r_mutex;
@@ -19,13 +19,30 @@ void* writer(void* args){
     while(w_count<=640){
         w_count++;
 
+        pthread_mutex_lock(&w_mutex);
+        current_w++;
+        if(current_w == 1){
+            sem_wait(&r_sem); //if first writer block reader
+        }
+        pthread_mutex_unlock(&w_mutex);
+
         sem_wait(&w_sem);
-        //simluate reading
+
+        //critiucal section
+        //writing
         while(rand()>RAND_MAX/10000);
+
         sem_post(&w_sem);
+        pthread_mutex_lock(&w_mutex);
+        current_w--;
+        if(current_w <= 0){ //wake up reader
+            sem_post(&r_sem);
+        }
+        pthread_mutex_unlock(&w_mutex);
 
     }
-    sem_post(&w_sem);
+    //sem_post(&w_sem);
+
     pthread_exit(NULL);
 }
 void* reader(void* args){
@@ -51,6 +68,7 @@ void* reader(void* args){
         }
         pthread_mutex_unlock(&r_mutex);
     }
+
     pthread_exit(NULL);
 }
 
