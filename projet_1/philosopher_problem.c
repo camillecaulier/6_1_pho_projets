@@ -58,6 +58,7 @@ int main(int argc, char **argv ) {
     n_p = atoi(argv[1]); //number of philosophers
     if(n_p <= 0){
         perror("no philosophers, please give a value\n");
+        return 0;
     }
 
     pthread_t threads[n_p];

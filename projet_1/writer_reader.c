@@ -20,14 +20,12 @@ void* writer(void* args){
         w_count++;
 
         sem_wait(&w_sem);
-        fprintf(stdout,"writing\n");
+        //simluate reading
         while(rand()>RAND_MAX/10000);
         sem_post(&w_sem);
 
     }
     sem_post(&w_sem);
-    fprintf(stdout,"writing FINISHED ============\n");
-    fflush(stdout);
     pthread_exit(NULL);
 }
 void* reader(void* args){
@@ -43,18 +41,16 @@ void* reader(void* args){
         pthread_mutex_unlock(&r_mutex);
         sem_post(&r_sem);
 
-        //execution critical
-        fprintf(stdout,"reading currently : %d\n",r_current);
+        //execution critical:simulatre reading
         while (rand() > RAND_MAX/10000);
 
         pthread_mutex_lock(&r_mutex);
         r_current--;
         if(r_current<=0){
-            sem_post(&w_sem);//wake up writer when no writer
+            sem_post(&w_sem);//wake up writer when no reader
         }
         pthread_mutex_unlock(&r_mutex);
     }
-    fprintf(stdout,"READER FINSH=================\n");
     pthread_exit(NULL);
 }
 
@@ -101,6 +97,7 @@ int main(int argc, char** argv){
     pthread_mutex_destroy(&r_mutex);
     sem_destroy(&w_sem);
     sem_destroy(&r_sem);
+    return 0;
 
 
 }
