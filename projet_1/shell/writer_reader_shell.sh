@@ -34,7 +34,7 @@ do
   echo $i "threads"
   for((j=1;j<=NSAMPLE;j++))
   do
-    OUTPUT=$((/usr/bin/time -f %e ./producer_consumer $12 $i 2>&1) | cut -d\) -f2)
+    OUTPUT=$((/usr/bin/time -f %e ./producer_consumer 12 $i 2>&1) | cut -d\) -f2)
     echo $i, $OUTPUT >> data/producer_consumer_3.CSV
   done
 done

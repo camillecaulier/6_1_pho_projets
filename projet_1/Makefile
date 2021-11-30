@@ -1,32 +1,32 @@
 CC=gcc
-all: philosopher_problem.c producer_consumer.c
-	$(CC) -o philosopher_problem philosopher_problem.c -lpthread
-	$(CC) -o producer_consumer producer_consumer.c -lpthread
-	$(CC) -o writer_reader writer_reader.c -lpthread
+all: source/philosopher_problem.c source/producer_consumer.c
+	$(CC) -o executable/philosopher_problem source/philosopher_problem.c -lpthread
+	$(CC) -o executable/producer_consumer source/producer_consumer.c -lpthread
+	$(CC) -o executable/writer_reader source/writer_reader.c -lpthread
 
 clean:
-	rm philosopher_problem
-	rm producer_consumer
-	rm writer_reader
+	rm -f executable/philosopher_problem
+	rm -f executable/producer_consumer
+	rm -f executable/writer_reader
 
 performance_philosopher:
-	$(CC) -o philosopher_problem philosopher_problem.c -lpthread
+	$(CC) -o executable/philosopher_problem source/philosopher_problem.c -lpthread
 	bash philosopher_shell.sh
 
 performance_writer_reader:
-	$(CC) -o writer_reader writer_reader.c -lpthread
+	$(CC) -o executable/writer_reader source/writer_reader.c -lpthread
 	bash writer_reader_shell.sh
 
 performance_producer_consumer:
-	$(CC)producer_consumer.c -o producer_consumer -lpthread
+	$(CC) -o executable/producer_consumer source/producer_consumer.c -lpthread
 	bash producer_consumer_shell.sh
 
-philosopher_problem: philosopher_problem.c
-	$(CC) -o philosopher_problem philosopher_problem.c -lpthread
+philosopher_problem: source/philosopher_problem.c
+	$(CC)  source/philosopher_problem.c -o executable/philosopher_problem -lpthread
 
 
-producer_consumer: producer_consumer.c
-	$(CC) producer_consumer.c -o producer_consumer -lpthread
+producer_consumer: source/producer_consumer.c
+	$(CC) source/producer_consumer.c -o executable/producer_consumer -lpthread
 
-writer_reader: writer_reader.c
-	$(CC) writer_reader.c -o writer_reader -lpthread
+writer_reader: source/writer_reader.c
+	$(CC) source/writer_reader.c -o executable/writer_reader -lpthread
