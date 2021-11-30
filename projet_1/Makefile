@@ -13,6 +13,9 @@ performance_philosopher:
 	$(CC) -o philosopher_problem philosopher_problem.c -lpthread
 	bash philosopher_shell.sh
 
+performance_writer_reader:
+	$(CC) -o writer_reader writer_reader.c -lpthread
+	bash writer_reader_shell.sh
 philosopher_problem: philosopher_problem.c
 
 
