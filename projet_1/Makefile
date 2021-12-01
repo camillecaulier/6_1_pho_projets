@@ -1,8 +1,10 @@
 CC=gcc
-all: source/philosopher_problem.c source/producer_consumer.c
+all: source/philosopher_problem.c source/producer_consumer.c source/test_set.c source/test_test_set.c
 	$(CC) -o executable/philosopher_problem source/philosopher_problem.c -lpthread
 	$(CC) -o executable/producer_consumer source/producer_consumer.c -lpthread
 	$(CC) -o executable/writer_reader source/writer_reader.c -lpthread
+	$(CC) -o executable/test_set source/test_set.c -lpthread
+	$(CC) -o executable/test_test_set source/test_test_set.c -lpthread
 
 clean:
 	rm -f executable/philosopher_problem
@@ -22,11 +24,11 @@ performance_producer_consumer:
 	bash producer_consumer_shell.sh
 
 philosopher_problem: source/philosopher_problem.c
-	$(CC)  source/philosopher_problem.c -o executable/philosopher_problem -lpthread
+	$(CC)  -o executable/philosopher_problem source/philosopher_problem.c -lpthread
 
 
 producer_consumer: source/producer_consumer.c
-	$(CC) source/producer_consumer.c -o executable/producer_consumer -lpthread
+	$(CC) -o executable/producer_consumer source/producer_consumer.c -lpthread
 
 writer_reader: source/writer_reader.c
-	$(CC) source/writer_reader.c -o executable/writer_reader -lpthread
+	$(CC) -o executable/writer_reader source/writer_reader.c -lpthread

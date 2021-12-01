@@ -23,26 +23,29 @@ void my_mutex_lock(my_mutex_t *my_mutex){
             "testl %%eax, %%eax;"
             "jnz enter;"
             :"=m"(my_mutex->lock_val)
-            :"a"(1)));
+            :"a"(1));
 }
 
 void my_mutex_unlock(my_mutex_t *my_mutex){
     __asm__("xchgl %%eax, %0;"
             :"=m"(my_mutex->lock_val)
-            :"a"(0)));
+            :"a"(0));
 }
 
 void my_mutex_destroy(my_mutex_t *my_mutex){
+    //free(my_mutex->lock_val);
     free(my_mutex);
 }
 void *test(void *args){
     int cycles = 0;
-    while(cylces <= 6400/n_threads){
+    while(cycles <= 64/n_threads){
         cycles++;
-        my_mutex_lock(mutex_test);
+        my_mutex_lock(&mutex_test);
         while (rand() > RAND_MAX/10000);
-        my_mutex_unlock(mutex_test);
+        //fprintf(stdout,"writing\n");
+        my_mutex_unlock(&mutex_test);
     }
+    pthread_exit(NULL);
 }
 
 int main(int argc, char **argv ) {
@@ -53,22 +56,25 @@ int main(int argc, char **argv ) {
     }
 
     pthread_t threads[n_threads];
-    my_mutex_init(mutex_test);
+    my_mutex_init(&mutex_test);
 
-    for(int i; i < n_threads ; i++){
-        int create_errror=pthread_create(&threads[i],NULL,test,NULL);
-        if(create_errror){
+    
+    for(int i=0; i < n_threads ; i++){
+        int create_error=pthread_create(&threads[i],NULL,test,NULL);
+        if(create_error){
             fprintf(stderr,"error with thread creation %d\n",i);
         }
     }
 
-    my_mutex_destroy(mutex_test);
+
     for(int i =0; i< n_threads; i++){
         int destroy_error= pthread_join(threads[i], NULL);
         if(destroy_error){
             fprintf(stderr,"error with thread join %d \n",i);
         }
     }
+    //my_mutex_destroy(&mutex_test);
+    //free(*mutex_test);
 
     return 0;
 
