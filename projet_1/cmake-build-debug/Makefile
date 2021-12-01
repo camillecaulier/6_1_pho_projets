@@ -123,6 +123,33 @@ projet_1/fast:
 	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/build
 .PHONY : projet_1/fast
 
+source/my_semaphore.o: source/my_semaphore.c.o
+
+.PHONY : source/my_semaphore.o
+
+# target to build an object file
+source/my_semaphore.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/my_semaphore.c.o
+.PHONY : source/my_semaphore.c.o
+
+source/my_semaphore.i: source/my_semaphore.c.i
+
+.PHONY : source/my_semaphore.i
+
+# target to preprocess a source file
+source/my_semaphore.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/my_semaphore.c.i
+.PHONY : source/my_semaphore.c.i
+
+source/my_semaphore.s: source/my_semaphore.c.s
+
+.PHONY : source/my_semaphore.s
+
+# target to generate assembly for a file
+source/my_semaphore.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/my_semaphore.c.s
+.PHONY : source/my_semaphore.c.s
+
 source/philosopher_problem.o: source/philosopher_problem.c.o
 
 .PHONY : source/philosopher_problem.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... projet_1"
+	@echo "... source/my_semaphore.o"
+	@echo "... source/my_semaphore.i"
+	@echo "... source/my_semaphore.s"
 	@echo "... source/philosopher_problem.o"
 	@echo "... source/philosopher_problem.i"
 	@echo "... source/philosopher_problem.s"

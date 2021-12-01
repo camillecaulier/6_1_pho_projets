@@ -58,7 +58,7 @@ int main(int argc, char **argv ) {
     pthread_t threads[n_threads];
     my_mutex_init(&mutex_test);
 
-    
+
     for(int i=0; i < n_threads ; i++){
         int create_error=pthread_create(&threads[i],NULL,test,NULL);
         if(create_error){
