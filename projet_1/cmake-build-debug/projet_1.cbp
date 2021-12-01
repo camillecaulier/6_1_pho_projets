@@ -79,16 +79,28 @@
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/my_semaphore.c">
 			<Option target="projet_1"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/my_semaphore.h">
+			<Option target="projet_1"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/philosopher_problem.c">
 			<Option target="projet_1"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/philosopher_problem_mod.c">
+			<Option target="projet_1"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/producer_consumer.c">
+			<Option target="projet_1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/producer_consumer_mod.c">
 			<Option target="projet_1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/test_test_set.h">
 			<Option target="projet_1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/writer_reader.c">
+			<Option target="projet_1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/writer_reader_mod.c">
 			<Option target="projet_1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/CMakeLists.txt">

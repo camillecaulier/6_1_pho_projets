@@ -177,6 +177,33 @@ source/philosopher_problem.c.s:
 	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/philosopher_problem.c.s
 .PHONY : source/philosopher_problem.c.s
 
+source/philosopher_problem_mod.o: source/philosopher_problem_mod.c.o
+
+.PHONY : source/philosopher_problem_mod.o
+
+# target to build an object file
+source/philosopher_problem_mod.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/philosopher_problem_mod.c.o
+.PHONY : source/philosopher_problem_mod.c.o
+
+source/philosopher_problem_mod.i: source/philosopher_problem_mod.c.i
+
+.PHONY : source/philosopher_problem_mod.i
+
+# target to preprocess a source file
+source/philosopher_problem_mod.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/philosopher_problem_mod.c.i
+.PHONY : source/philosopher_problem_mod.c.i
+
+source/philosopher_problem_mod.s: source/philosopher_problem_mod.c.s
+
+.PHONY : source/philosopher_problem_mod.s
+
+# target to generate assembly for a file
+source/philosopher_problem_mod.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/philosopher_problem_mod.c.s
+.PHONY : source/philosopher_problem_mod.c.s
+
 source/producer_consumer.o: source/producer_consumer.c.o
 
 .PHONY : source/producer_consumer.o
@@ -203,6 +230,33 @@ source/producer_consumer.s: source/producer_consumer.c.s
 source/producer_consumer.c.s:
 	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/producer_consumer.c.s
 .PHONY : source/producer_consumer.c.s
+
+source/producer_consumer_mod.o: source/producer_consumer_mod.c.o
+
+.PHONY : source/producer_consumer_mod.o
+
+# target to build an object file
+source/producer_consumer_mod.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/producer_consumer_mod.c.o
+.PHONY : source/producer_consumer_mod.c.o
+
+source/producer_consumer_mod.i: source/producer_consumer_mod.c.i
+
+.PHONY : source/producer_consumer_mod.i
+
+# target to preprocess a source file
+source/producer_consumer_mod.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/producer_consumer_mod.c.i
+.PHONY : source/producer_consumer_mod.c.i
+
+source/producer_consumer_mod.s: source/producer_consumer_mod.c.s
+
+.PHONY : source/producer_consumer_mod.s
+
+# target to generate assembly for a file
+source/producer_consumer_mod.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/producer_consumer_mod.c.s
+.PHONY : source/producer_consumer_mod.c.s
 
 source/writer_reader.o: source/writer_reader.c.o
 
@@ -231,6 +285,33 @@ source/writer_reader.c.s:
 	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/writer_reader.c.s
 .PHONY : source/writer_reader.c.s
 
+source/writer_reader_mod.o: source/writer_reader_mod.c.o
+
+.PHONY : source/writer_reader_mod.o
+
+# target to build an object file
+source/writer_reader_mod.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/writer_reader_mod.c.o
+.PHONY : source/writer_reader_mod.c.o
+
+source/writer_reader_mod.i: source/writer_reader_mod.c.i
+
+.PHONY : source/writer_reader_mod.i
+
+# target to preprocess a source file
+source/writer_reader_mod.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/writer_reader_mod.c.i
+.PHONY : source/writer_reader_mod.c.i
+
+source/writer_reader_mod.s: source/writer_reader_mod.c.s
+
+.PHONY : source/writer_reader_mod.s
+
+# target to generate assembly for a file
+source/writer_reader_mod.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/writer_reader_mod.c.s
+.PHONY : source/writer_reader_mod.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,12 +327,21 @@ help:
 	@echo "... source/philosopher_problem.o"
 	@echo "... source/philosopher_problem.i"
 	@echo "... source/philosopher_problem.s"
+	@echo "... source/philosopher_problem_mod.o"
+	@echo "... source/philosopher_problem_mod.i"
+	@echo "... source/philosopher_problem_mod.s"
 	@echo "... source/producer_consumer.o"
 	@echo "... source/producer_consumer.i"
 	@echo "... source/producer_consumer.s"
+	@echo "... source/producer_consumer_mod.o"
+	@echo "... source/producer_consumer_mod.i"
+	@echo "... source/producer_consumer_mod.s"
 	@echo "... source/writer_reader.o"
 	@echo "... source/writer_reader.i"
 	@echo "... source/writer_reader.s"
+	@echo "... source/writer_reader_mod.o"
+	@echo "... source/writer_reader_mod.i"
+	@echo "... source/writer_reader_mod.s"
 .PHONY : help
 
 
