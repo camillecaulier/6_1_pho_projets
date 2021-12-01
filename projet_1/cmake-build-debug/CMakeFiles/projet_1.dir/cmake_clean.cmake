@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/projet_1.dir/source/philosopher_problem.c.obj"
-  "CMakeFiles/projet_1.dir/source/producer_consumer.c.obj"
-  "CMakeFiles/projet_1.dir/source/writer_reader.c.obj"
-  "projet_1.exe"
-  "projet_1.exe.manifest"
-  "projet_1.lib"
+  "CMakeFiles/projet_1.dir/source/philosopher_problem.c.o"
+  "CMakeFiles/projet_1.dir/source/producer_consumer.c.o"
+  "CMakeFiles/projet_1.dir/source/writer_reader.c.o"
+  "projet_1"
   "projet_1.pdb"
 )
 
