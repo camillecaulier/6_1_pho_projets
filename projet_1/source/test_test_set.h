@@ -6,8 +6,8 @@
 #define PROJET_1_TEST_TEST_SET_H
 
 #endif //PROJET_1_TEST_TEST_SET_H
-typedef struct my_mutex_t{
-    int lockval;
+typedef struct {
+    int lock_val;
 }my_mutex_t;
 
 void my_mutex_init(my_mutex_t* my_mutex);

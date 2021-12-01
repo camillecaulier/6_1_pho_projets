@@ -8,7 +8,7 @@
 ///mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1
 int n_p;
 int n_c;
-pthread_mutex_t mutex_buffer;
+pthread_mutex_t my_mutex_buffer;
 int buffer[8];
 int count;
 sem_t n_places_free;
@@ -18,9 +18,9 @@ pthread_mutex_t mutex_total_elem;
 void* producer(void* args){
     while(1){
         sem_wait(&n_places_free);
-        pthread_mutex_lock(&mutex_buffer);
+        pthread_mutex_lock(&my_mutex_buffer);
         if(total_elem>= 1024){//check we don't surpass 1024 values
-            pthread_mutex_unlock(&mutex_buffer);
+            pthread_mutex_unlock(&my_mutex_buffer);
             break;
         }
 
@@ -30,7 +30,7 @@ void* producer(void* args){
         //critcal section
         while(rand()>RAND_MAX/10000);
         //printf("[prducdes %d\n",total_elem);
-        pthread_mutex_unlock(&mutex_buffer);
+        pthread_mutex_unlock(&my_mutex_buffer);
         sem_post(&n_places_taken);
 
 
@@ -43,15 +43,15 @@ void* consumer(void* args){
     while(1){
 
         sem_wait(&n_places_taken);
-        pthread_mutex_lock(&mutex_buffer);
+        pthread_mutex_lock(&my_mutex_buffer);
         if(total_elem>=1024 && count==0){
-            pthread_mutex_unlock(&mutex_buffer);
+            pthread_mutex_unlock(&my_mutex_buffer);
             break;
         }
 
         count--;
         //printf("%d\n",total_elem);
-        pthread_mutex_unlock(&mutex_buffer);
+        pthread_mutex_unlock(&my_mutex_buffer);
         sem_post(&n_places_free);
         //taken element and runs request/process
         while(rand()>RAND_MAX/10000);
@@ -73,7 +73,7 @@ int main(int argc, char **argv ){
     pthread_t c_threads[n_c];
     sem_init(&n_places_free,0,8);
     sem_init(&n_places_taken,0,0);
-    pthread_mutex_init(&mutex_buffer, NULL);
+    pthread_mutex_init(&my_mutex_buffer, NULL);
 
     for(int i=0;i<n_p;i++){
         if(pthread_create(&p_threads[i],NULL,producer,NULL)){
@@ -98,7 +98,7 @@ int main(int argc, char **argv ){
     }
     sem_destroy(&n_places_free);
     sem_destroy(&n_places_taken);
-    pthread_mutex_destroy(&mutex_buffer);
+    pthread_mutex_destroy(&my_mutex_buffer);
 
 
     return 0;
