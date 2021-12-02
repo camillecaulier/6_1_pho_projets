@@ -13,4 +13,14 @@ do
     echo $i, $OUTPUT >> data/philosopher_problem.CSV
   done
 done
-rm -f philosopher_problem
+rm -f data/philosopher_problem_mod.CSV
+echo "n_thread","time" >> data/philosopher_problem_mod.CSV
+for((i=1;i<=NTHREADS;i++))
+do
+  echo $i "threads"
+  for((j=1;j<=NSAMPLE;j++))
+  do
+    OUTPUT=$((/usr/bin/time -f %e ./executable/philosopher_problem_mod $i 2>&1) | cut -d\) -f2)
+    echo $i, $OUTPUT >> data/philosopher_problem_mod.CSV
+  done
+done
