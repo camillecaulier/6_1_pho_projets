@@ -1,13 +1,13 @@
 CC=gcc
-all: source/philosopher_problem.c source/producer_consumer.c source/test_set.c source/test_test_set.c
+all: source/philosopher_problem.c source/producer_consumer.c source/test_set.c source/test_test_set_lib.c
 	$(CC) -o executable/philosopher_problem source/philosopher_problem.c -lpthread
 	$(CC) -o executable/producer_consumer source/producer_consumer.c -lpthread
 	$(CC) -o executable/writer_reader source/writer_reader.c -lpthread
 	$(CC) -o executable/test_set source/test_set.c -lpthread
-	$(CC) -o executable/test_test_set source/test_test_set.c -lpthread
-	$(CC) -o executable/philosopher_problem_mod source/philosopher_problem_mod.c source/my_semaphore.c source/test_test_set.c -lpthread
-	$(CC) -o executable/producer_consumer_mod source/producer_consumer_mod.c -lpthread
-	$(CC) -o executable/writer_reader_mod source/writer_reader_mod.c -lpthread
+	$(CC) -o executable/test_test_set_performance source/test_test_set_performance.c source/test_test_set_lib.c -lpthread
+	$(CC) -o executable/philosopher_problem_mod source/philosopher_problem_mod.c source/my_semaphore.c source/test_test_set_lib.c -lpthread
+	$(CC) -o executable/producer_consumer_mod source/producer_consumer_mod.c source/my_semaphore.c source/test_test_set_lib.c -lpthread
+	#$(CC) -o executable/writer_reader_mod source/writer_reader_mod.c -lpthread
 
 clean:
 	rm -f executable/philosopher_problem
