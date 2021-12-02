@@ -38,7 +38,7 @@ void my_mutex_destroy(my_mutex_t *my_mutex){
 }
 void *test(void *args){
     int cycles = 0;
-    while(cycles <= 64/n_threads){
+    while(cycles <= 6400/n_threads){
         cycles++;
         my_mutex_lock(&mutex_test);
         while (rand() > RAND_MAX/10000);
