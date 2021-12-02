@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "test_test_set.h"
+#include "test_test_set_lib.h"
 
 
 typedef struct my_sem_t{

@@ -188,8 +188,22 @@ CMakeFiles\projet_1.dir\source\producer_consumer_mod.c.s: cmake_force
  /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\projet_1.dir\source\producer_consumer_mod.c.s /c C:\Users\Noah\Documents\Projet_6_1_faux\6_1_pho_projets\projet_1\source\producer_consumer_mod.c
 <<
 
+CMakeFiles/projet_1.dir/source/test_test_set_performance.c.o: CMakeFiles/projet_1.dir/flags.make
+CMakeFiles/projet_1.dir/source/test_test_set_performance.c.o: ../source/test_test_set_performance.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/projet_1.dir/source/test_test_set_performance.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/projet_1.dir/source/test_test_set_performance.c.o   -c /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/test_test_set_performance.c
+
+CMakeFiles/projet_1.dir/source/test_test_set_performance.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/projet_1.dir/source/test_test_set_performance.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/test_test_set_performance.c > CMakeFiles/projet_1.dir/source/test_test_set_performance.c.i
+
+CMakeFiles/projet_1.dir/source/test_test_set_performance.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/projet_1.dir/source/test_test_set_performance.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/test_test_set_performance.c -o CMakeFiles/projet_1.dir/source/test_test_set_performance.c.s
+
 # Object files for target projet_1
 projet_1_OBJECTS = \
+<<<<<<< HEAD
 "CMakeFiles\projet_1.dir\source\philosopher_problem.c.obj" \
 "CMakeFiles\projet_1.dir\source\producer_consumer.c.obj" \
 "CMakeFiles\projet_1.dir\source\writer_reader.c.obj" \
@@ -197,10 +211,21 @@ projet_1_OBJECTS = \
 "CMakeFiles\projet_1.dir\source\philosopher_problem_mod.c.obj" \
 "CMakeFiles\projet_1.dir\source\writer_reader_mod.c.obj" \
 "CMakeFiles\projet_1.dir\source\producer_consumer_mod.c.obj"
+=======
+"CMakeFiles/projet_1.dir/source/philosopher_problem.c.o" \
+"CMakeFiles/projet_1.dir/source/producer_consumer.c.o" \
+"CMakeFiles/projet_1.dir/source/writer_reader.c.o" \
+"CMakeFiles/projet_1.dir/source/my_semaphore.c.o" \
+"CMakeFiles/projet_1.dir/source/philosopher_problem_mod.c.o" \
+"CMakeFiles/projet_1.dir/source/writer_reader_mod.c.o" \
+"CMakeFiles/projet_1.dir/source/producer_consumer_mod.c.o" \
+"CMakeFiles/projet_1.dir/source/test_test_set_performance.c.o"
+>>>>>>> f6b5eb34ca1d75ab75bc1025aa34737195ed57ab
 
 # External object files for target projet_1
 projet_1_EXTERNAL_OBJECTS =
 
+<<<<<<< HEAD
 projet_1.exe: CMakeFiles\projet_1.dir\source\philosopher_problem.c.obj
 projet_1.exe: CMakeFiles\projet_1.dir\source\producer_consumer.c.obj
 projet_1.exe: CMakeFiles\projet_1.dir\source\writer_reader.c.obj
@@ -214,6 +239,20 @@ projet_1.exe: CMakeFiles\projet_1.dir\objects1.rsp
 	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\projet_1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\projet_1.dir\objects1.rsp @<<
  /out:projet_1.exe /implib:projet_1.lib /pdb:C:\Users\Noah\Documents\Projet_6_1_faux\6_1_pho_projets\projet_1\cmake-build-debug\projet_1.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
+=======
+projet_1: CMakeFiles/projet_1.dir/source/philosopher_problem.c.o
+projet_1: CMakeFiles/projet_1.dir/source/producer_consumer.c.o
+projet_1: CMakeFiles/projet_1.dir/source/writer_reader.c.o
+projet_1: CMakeFiles/projet_1.dir/source/my_semaphore.c.o
+projet_1: CMakeFiles/projet_1.dir/source/philosopher_problem_mod.c.o
+projet_1: CMakeFiles/projet_1.dir/source/writer_reader_mod.c.o
+projet_1: CMakeFiles/projet_1.dir/source/producer_consumer_mod.c.o
+projet_1: CMakeFiles/projet_1.dir/source/test_test_set_performance.c.o
+projet_1: CMakeFiles/projet_1.dir/build.make
+projet_1: CMakeFiles/projet_1.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable projet_1"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projet_1.dir/link.txt --verbose=$(VERBOSE)
+>>>>>>> f6b5eb34ca1d75ab75bc1025aa34737195ed57ab
 
 # Rule to build all files generated by this target.
 CMakeFiles\projet_1.dir\build: projet_1.exe

@@ -238,8 +238,41 @@ source\producer_consumer_mod.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projet_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\projet_1.dir\source\producer_consumer_mod.c.s
 .PHONY : source\producer_consumer_mod.c.s
 
+<<<<<<< HEAD
 source\writer_reader.obj: source\writer_reader.c.obj
 .PHONY : source\writer_reader.obj
+=======
+source/test_test_set_performance.o: source/test_test_set_performance.c.o
+
+.PHONY : source/test_test_set_performance.o
+
+# target to build an object file
+source/test_test_set_performance.c.o:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/test_test_set_performance.c.o
+.PHONY : source/test_test_set_performance.c.o
+
+source/test_test_set_performance.i: source/test_test_set_performance.c.i
+
+.PHONY : source/test_test_set_performance.i
+
+# target to preprocess a source file
+source/test_test_set_performance.c.i:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/test_test_set_performance.c.i
+.PHONY : source/test_test_set_performance.c.i
+
+source/test_test_set_performance.s: source/test_test_set_performance.c.s
+
+.PHONY : source/test_test_set_performance.s
+
+# target to generate assembly for a file
+source/test_test_set_performance.c.s:
+	$(MAKE) -f CMakeFiles/projet_1.dir/build.make CMakeFiles/projet_1.dir/source/test_test_set_performance.c.s
+.PHONY : source/test_test_set_performance.c.s
+
+source/writer_reader.o: source/writer_reader.c.o
+
+.PHONY : source/writer_reader.o
+>>>>>>> f6b5eb34ca1d75ab75bc1025aa34737195ed57ab
 
 # target to build an object file
 source\writer_reader.c.obj:
@@ -288,6 +321,7 @@ source\writer_reader_mod.c.s:
 
 # Help Target
 help:
+<<<<<<< HEAD
 	@echo The following are some of the valid targets for this Makefile:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
@@ -316,6 +350,39 @@ help:
 	@echo ... source/writer_reader_mod.obj
 	@echo ... source/writer_reader_mod.i
 	@echo ... source/writer_reader_mod.s
+=======
+	@echo "The following are some of the valid targets for this Makefile:"
+	@echo "... all (the default if no target is provided)"
+	@echo "... clean"
+	@echo "... depend"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... projet_1"
+	@echo "... source/my_semaphore.o"
+	@echo "... source/my_semaphore.i"
+	@echo "... source/my_semaphore.s"
+	@echo "... source/philosopher_problem.o"
+	@echo "... source/philosopher_problem.i"
+	@echo "... source/philosopher_problem.s"
+	@echo "... source/philosopher_problem_mod.o"
+	@echo "... source/philosopher_problem_mod.i"
+	@echo "... source/philosopher_problem_mod.s"
+	@echo "... source/producer_consumer.o"
+	@echo "... source/producer_consumer.i"
+	@echo "... source/producer_consumer.s"
+	@echo "... source/producer_consumer_mod.o"
+	@echo "... source/producer_consumer_mod.i"
+	@echo "... source/producer_consumer_mod.s"
+	@echo "... source/test_test_set_performance.o"
+	@echo "... source/test_test_set_performance.i"
+	@echo "... source/test_test_set_performance.s"
+	@echo "... source/writer_reader.o"
+	@echo "... source/writer_reader.i"
+	@echo "... source/writer_reader.s"
+	@echo "... source/writer_reader_mod.o"
+	@echo "... source/writer_reader_mod.i"
+	@echo "... source/writer_reader_mod.s"
+>>>>>>> f6b5eb34ca1d75ab75bc1025aa34737195ed57ab
 .PHONY : help
 
 

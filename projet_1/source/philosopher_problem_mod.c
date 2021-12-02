@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include "my_semaphore.h"
-#include "test_test_set.h"
+#include "test_test_set_lib.h"
 
 //gcc -o test philosopher_problem.c -lpthread
 typedef enum {hungry, eating, thinking} state;

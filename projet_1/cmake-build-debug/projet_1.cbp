@@ -100,7 +100,14 @@
 		<Unit filename="C:/Users/Noah/Documents/Projet_6_1_faux/6_1_pho_projets/projet_1/source/producer_consumer_mod.c">
 			<Option target="projet_1"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="C:/Users/Noah/Documents/Projet_6_1_faux/6_1_pho_projets/projet_1/source/test_test_set.h">
+=======
+		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/test_test_set_lib.h">
+			<Option target="projet_1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_1/source/test_test_set_performance.c">
+>>>>>>> f6b5eb34ca1d75ab75bc1025aa34737195ed57ab
 			<Option target="projet_1"/>
 		</Unit>
 		<Unit filename="C:/Users/Noah/Documents/Projet_6_1_faux/6_1_pho_projets/projet_1/source/writer_reader.c">

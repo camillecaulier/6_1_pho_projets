@@ -10,8 +10,7 @@ typedef struct my_mutex_t{
     int lock_val;
 }my_mutex_t;
 
-int n_threads;
-my_mutex_t mutex_test;
+
 
 void my_mutex_init(my_mutex_t* my_mutex){
     my_mutex->lock_val = 0;
