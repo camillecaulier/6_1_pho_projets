@@ -27,9 +27,10 @@ void my_mutex_lock(my_mutex_t *my_mutex){
 }
 
 void my_mutex_unlock(my_mutex_t *my_mutex){
-    __asm__("xchgl %%eax, %0;"
-    :"=m"(my_mutex->lock_val)
-    :"a"(0));
+//    __asm__("xchgl %%eax, %0;"
+//    :"=m"(my_mutex->lock_val)
+//    :"a"(0));
+    my_mutex->lock_val=0;
 }
 
 void my_mutex_destroy(my_mutex_t *my_mutex){

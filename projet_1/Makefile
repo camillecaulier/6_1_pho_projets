@@ -1,9 +1,9 @@
 CC=gcc
-all: source/philosopher_problem.c source/producer_consumer.c source/test_set.c source/test_test_set_lib.c
+all: source/philosopher_problem.c source/producer_consumer.c source/test_set_lib.c source/test_test_set_lib.c
 	$(CC) -o executable/philosopher_problem source/philosopher_problem.c -lpthread
 	$(CC) -o executable/producer_consumer source/producer_consumer.c -lpthread
 	$(CC) -o executable/writer_reader source/writer_reader.c -lpthread
-	$(CC) -o executable/test_set source/test_set.c -lpthread
+	$(CC) -o executable/test_set source/test_set_performance.c source/test_set_lib.c  -lpthread
 	$(CC) -o executable/test_test_set_performance source/test_test_set_performance.c source/test_test_set_lib.c -lpthread
 	$(CC) -o executable/philosopher_problem_mod source/philosopher_problem_mod.c source/my_semaphore.c source/test_test_set_lib.c -lpthread
 	$(CC) -o executable/producer_consumer_mod source/producer_consumer_mod.c source/my_semaphore.c source/test_test_set_lib.c -lpthread
@@ -42,7 +42,7 @@ performance_all:
 	#bash shell/philosopher_shell.sh
 	#bash shell/writer_reader_shell.sh
 	#bash shell/producer_consumer_shell.sh
-	#bash shell/test_shell.sh
+	bash shell/test_shell.sh
 
 plot_all:
 	python python_files/philosopher_problem.py

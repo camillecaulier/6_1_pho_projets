@@ -3,16 +3,16 @@ import numpy as np
 import pandas as pd
 
 #Writer and reader with parameters
-writer_reader_data= pd.read_csv("../data_complete/test_set.CSV")
+writer_reader_data= pd.read_csv("../data/test_set.CSV")
 mean = writer_reader_data.groupby(["n_thread"]).mean()["time"]
 var = writer_reader_data.groupby(["n_thread"]).std()["time"]
 n_thread =writer_reader_data["n_thread"].unique()
 
-writer_reader_data= pd.read_csv("../data_complete/test_test_set.CSV")
+writer_reader_data= pd.read_csv("../data/test_test_set.CSV")
 mean_mod = writer_reader_data.groupby(["n_thread"]).mean()["time"]
 var_mod = writer_reader_data.groupby(["n_thread"]).std()["time"]
 
-writer_reader_data= pd.read_csv("../data_complete/posix.CSV")
+writer_reader_data= pd.read_csv("../data/posix.CSV")
 mean_posix = writer_reader_data.groupby(["n_thread"]).mean()["time"]
 var_posix = writer_reader_data.groupby(["n_thread"]).std()["time"]
 

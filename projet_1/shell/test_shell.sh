@@ -1,5 +1,5 @@
 #!/bin/bash
-NTHREADS=16
+NTHREADS=32
 NSAMPLE=5
 #make philosopher_problem
 rm -f data/test_set.CSV
