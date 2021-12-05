@@ -39,10 +39,11 @@ void* producer(void* args){
         count++;
 
         //critcal section
-        while(rand()>RAND_MAX/10000);
+
         //printf("[prducdes %d\n",total_elem);
         pthread_mutex_unlock(&my_mutex_buffer);
         my_sem_post(&n_places_taken);
+        while(rand()>RAND_MAX/10000);
     }
     //sem_post(&n_places_taken);
 
