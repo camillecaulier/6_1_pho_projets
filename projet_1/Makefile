@@ -39,7 +39,7 @@ performance_test_set_vs_test_test_set:
 
 performance_all:
 	make all
-	bbash shell/philosopher_shell.sh
+	bash shell/philosopher_shell.sh
 	bash shell/writer_reader_shell.sh
 	bash shell/producer_consumer_shell.sh
 	bash shell/test_shell.sh
