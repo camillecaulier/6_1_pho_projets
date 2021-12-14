@@ -1,0 +1,3 @@
+/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Camil/OneDrive/Documents/bac_3/linfo1253/6_1_pho_projets/projet_2/cmake-build-debug/CMakeFiles/projet_2.dir
